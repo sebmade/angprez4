@@ -1,8 +1,14 @@
 'use strict';
 
 angular.module('angprez4App')
-  .controller('MainCtrl', function ($scope, $document) {
+  .controller('MainCtrl', function ($scope, $document, $http) {
     $scope.slideIndex = 0;
+
+    $http.get("/data/slides.json").success(function(data) {
+      $scope.slides = data;
+    }).error(function(data) {
+
+    });
 
     $scope.nextSlide = function () {
       $scope.slideIndex++;
@@ -12,7 +18,7 @@ angular.module('angprez4App')
     };
 
     $scope.currentSlide = function () {
-      return "slide"+$scope.slideIndex+".html";
+      return $scope.slides[$scope.slideIndex].content;
     };
 
     $document.keydown(function(event) {

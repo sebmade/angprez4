@@ -8,6 +8,9 @@
     <a ng-click="previousSlide()">
         <div class="left-triangle"></div>
     </a>
+    <div class="header" ng-show="slides[slideIndex].title">
+        <h1 class="title" ng-bind-html="slides[slideIndex].title"></h1>
+    </div>
     <div class="container" ng-include="currentSlide()"></div>
     <a ng-click="nextSlide()">
         <div class="right-triangle"></div>

@@ -4,22 +4,7 @@
 </head>
 <body ng-app="angprez4App" ng-controller="MainCtrl">
 
-<div>
-    <a ng-click="previousSlide()">
-        <div class="left-triangle"></div>
-    </a>
-    <div class="header" ng-show="slides[slideIndex].title">
-        <h1 class="title" ng-bind-html="slides[slideIndex].title"></h1>
-    </div>
-    <div class="container" ng-include="currentSlide()"></div>
-    <a ng-click="nextSlide()">
-        <div class="right-triangle"></div>
-    </a>
-    <span class="slideNo">
-        <span>{{slideIndex+1}}</span> / <span>8</span>
-    </span>
-</div>
-
+    <slider></slider>
 
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
@@ -32,6 +17,7 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/directives/slider.js"></script>
     <!-- endbuild -->
 </body>
 </html>

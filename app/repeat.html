@@ -1,6 +1,9 @@
     <br><br><br>
 
-    <div class="note" ng-repeat="s in slides">
+    <input class="note" autofocus ng-model="query">
+    <br>
+
+    <div class="note" ng-repeat="s in slides | filter:query">
       <a ng-bind-html="s.title" ng-click="gotoSlide(s)"></a>
       <br>
     </div>

@@ -1,0 +1,454 @@
+@import "fonts.css";
+@import "code-prettify.css";
+
+.slide.ng-enter, .slide.ng-leave {
+    -webkit-transition:left 0.2s linear;
+    transition:left 0.2s linear;
+}
+/* starting animations for enter */
+.slide.ng-enter {
+    left: 100%;
+}
+/* terminal animations for enter */
+.slide.ng-enter-active {
+    left: 50%;
+}
+/* starting animations for leave */
+.slide.ng-leave {
+    display: none;
+}
+/* terminal animations for leave */
+.slide.ng-leave-active {
+}
+
+body, .header, h1 {
+    margin: 0;
+}
+
+.center, .container {
+    text-align: center;
+}
+
+body {
+    padding: 0;
+    font-family: 'Asap', sans-serif;
+    letter-spacing: -1px;
+    word-spacing: 2px;
+    line-height: 1.1;
+    font-size: 2em;
+}
+
+a:hover {
+    cursor: pointer;
+    color: #0000ff;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -58px;
+    padding: 10px;
+    z-index: 1;
+}
+
+.title {
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+.header {
+    position: absolute;
+    left: 10%;
+    top: 2%;
+    background-color: rgba(0, 40, 50, 0.8);
+    z-index: 1;
+    padding: 13px 15px;
+    border-radius: 10px;
+}
+
+.slideNo {
+    padding: 25px 25px;
+    position: fixed;
+    float: right;
+    bottom: 0;
+    right: 0;
+}
+
+.title2 {
+    font-size: 3em;
+    margin: 20px;
+}
+
+.subtitle {
+    font-size: 2em;
+    margin: 20px;
+}
+
+.bloc {
+    color: #fff;
+    background-color: rgba(0, 40, 50, 0.8);
+    margin: 70px 125px;
+    padding: 6px 10px 3px 10px;
+    border-radius: 10px;
+}
+
+.tag2 {
+    font-size: 2em;
+    color: #fff;
+    background-color: rgba(0, 40, 50, 0.8);
+    margin: 5px 5px;
+    padding: 3px 26px;
+    border-radius: 10px;
+}
+
+.prettyprint {
+    text-align: left;
+    font-weight: 600;
+    padding: 10px;
+    border: 1px solid #578;
+    border-radius: 8px;
+}
+.note {
+    font-size: 1em;
+    margin: 10px;
+}
+
+.back-image {
+    width: 75%;
+    height: 75%;
+    border-radius: 15px;
+    margin-top: 100px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -512px;
+    margin-right: 0;
+    margin-top: -384px;
+    margin-bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: none;
+    width: 924px;
+    height: 668px;
+}
+
+.right-triangle {
+    position: fixed;
+    bottom: 50%;
+    top: 50%;
+    right: 0;
+    float: right;
+    width: 0;
+    height: 0;
+    border-left: 40px solid #d9d9d9;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    z-index: 1;
+}
+
+.right-triangle:hover {
+    border-left: 40px solid #8c8c8c;
+}
+.left-triangle {
+    position: fixed;
+    bottom: 50%;
+    top: 50%;
+    left: 0;
+    float: left;
+    width: 0;
+    height: 0;
+    border-right: 40px solid #d9d9d9;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    z-index: 1;
+}
+
+.link {
+    color: #0000ff;
+}
+
+.left-triangle:hover {
+    border-right: 40px solid #8c8c8c;
+}
+
+.social-media {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'SocialMediaFont';
+    width: 20px;
+    opacity: 1;
+    border-radius: 15px;
+    padding: 7px 8px 5px 3px;
+    opacity: 0.6;
+}
+.red {
+    color: red;
+}
+.social-media a {
+    color: white;
+    text-decoration: none;
+    font-size: 35px;
+    line-height: 0;
+}
+.rss-icon {
+    background-color: #FF9600;
+}
+.twitter-icon {
+    background-color: #45B0E3;
+}
+.gplus-icon {
+    background-color: #B33022;
+}
+
+figure {
+    width: 200px;
+    height: 200px;
+    padding: 40px;
+    box-shadow: inset -10px -30px rgba(0,0,0,.06);
+    border-radius: 50%;
+    -webkit-animation: bobble 5s ease-in-out infinite;
+    animation: bobble 5s ease-in-out infinite;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-transition: padding .3s, bottom .3s;
+    transition: padding .3s, bottom .3s;
+    text-align: center;
+    background: cadetblue;
+}
+
+@-webkit-keyframes bobble {
+    33% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+
+    66% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes bobble {
+    33% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+
+    66% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+}
+
+li:nth-child(5n+1) figure {
+    -webkit-animation-delay: -3s;
+    animation-delay: -3s;
+    background-color: cadetblue;
+}
+
+li:nth-child(5n+1) figure {
+    -webkit-animation-delay: -3s;
+    animation-delay: -3s;
+    background-color: tomato;
+}
+
+li:nth-child(5n+2) figure {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+    background-color: dodgerblue;
+}
+
+li:nth-child(5n+3) figure {
+    -webkit-animation-delay: -4s;
+    animation-delay: -4s;
+    background-color: coral;
+}
+
+li:nth-child(5n+4) figure {
+    -webkit-animation-delay: -.2.5s;
+    animation-delay: -.2.5s;
+    background-color: limegreen;
+}
+
+li:hover figure {
+    padding: 30px 40px;
+}
+
+li:hover .click-anim {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+.click-anim {
+    -webkit-transition: .3s cubic-bezier(.15,.60,.30,1.9);
+    transition: .3s cubic-bezier(.15,.60,.30,1.9);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    position: relative;
+    top: 25%;
+    left: 25%;
+}
+
+li:active .click-anim {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.eye {
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+    margin: 0 5px 5px;
+    background: rgba(0,0,0,.9);
+    border-radius: 10px;
+    border-radius: 50%;
+    -webkit-animation: blink 4s ease-in-out infinite;
+    animation: blink 4s ease-in-out infinite;
+}
+
+@-webkit-keyframes blink {
+    90% {
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    95% {
+        -webkit-transform: rotateX(90deg);
+        transform: rotateX(90deg);
+    }
+}
+
+@keyframes blink {
+    90% {
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    95% {
+        -webkit-transform: rotateX(90deg);
+        transform: rotateX(90deg);
+    }
+}
+.mouth {
+    display: block;
+    width: 100%;
+    height: 20px;
+    margin: 5px auto 0;
+    background: rgba(0,0,0,.9);
+    border-radius: 10px 10px 100px 100px;
+    border-radius: 10px 10px 50% 50%;
+    -webkit-transition: border-radius .5s, height .5s cubic-bezier(.15,.60,.30,1.9);
+    transition: border-radius .5s, height .5s cubic-bezier(.15,.60,.30,1.9);
+    overflow: hidden;
+    line-height: 0;
+    -webkit-transform-origin: center top;
+    transform-origin: center top;
+}
+
+.teeth:after,
+.teeth:before,
+.tooth:after {
+    display: inline-block;
+    content: "";
+    margin: 0 2px;
+    width: 15px;
+    height: 15px;
+    background: #eee;
+}
+
+li:nth-child(odd) .tooth:after {
+    margin-right: 17px;
+}
+
+li:nth-child(even) .tooth:after {
+    margin-left: 17px;
+}
+
+.hungry .mouth {
+    -webkit-animation: hungry .5s infinite;
+    animation: hungry .5s infinite;
+    border-radius: 30px 30px 50% 50%;
+    height: 80px;
+}
+
+.hungry .mouth:hover {
+    cursor: none;
+}
+
+@-webkit-keyframes hungry {
+    40% {
+        height: 40px;
+    }
+}
+
+@keyframes hungry {
+    40% {
+        height: 40px;
+    }
+}
+
+.nervous .mouth {
+    -webkit-animation: nervous .2s infinite;
+    animation: nervous .2s infinite;
+    border-radius: 40% 40% 5px 5px;
+}
+
+@-webkit-keyframes nervous {
+    50% {
+        height: 24px;
+    }
+}
+
+@keyframes nervous {
+    50% {
+        height: 24px;
+    }
+}
+
+.hyper {
+    -webkit-animation: hyper 2s infinite;
+    animation: hyper 2s infinite;
+}
+
+@-webkit-keyframes hyper {
+    25% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    15%, 50% {
+        -webkit-transform: rotateX(20deg);
+        transform: rotateX(20deg);
+    }
+
+    75% {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes hyper {
+    25% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    15%, 50% {
+    -webkit-transform: rotateX(20deg);
+    transform: rotateX(20deg);
+}
+
+75% {
+    -webkit-transform: none;
+    transform: none;
+}
+    }
+
+.hyper .mouth {
+    height: 80px;
+    border-radius: 20px 20px 50% 50%;
+}

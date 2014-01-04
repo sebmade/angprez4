@@ -33,4 +33,8 @@ angular.module('angprez4App')
       }
     });
 
+    $scope.gotoSlide = function(s) {
+      $scope.slideIndex = $scope.slides.indexOf(s);
+    };
+
   });

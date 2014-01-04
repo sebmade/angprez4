@@ -39,4 +39,11 @@ angular.module('angprez4App')
       $scope.slideIndex = $scope.slides.indexOf(s);
     };
 
+    $scope.addSlide = function(t, c) {
+      $scope.slides.push({
+        title : t,
+        content : c
+      });
+    };
+    
   });
